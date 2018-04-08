@@ -10,6 +10,7 @@ const webcam = new Webcam(document.getElementById('webcam'));
   await webcam.setup();
   model = await downloadModel();
 
+  doneLoading();
   run();
 })();
 
@@ -58,4 +59,9 @@ export function clearRects() {
   while(rects[0]) {
     rects[0].parentNode.removeChild(rects[0]);
   }
+}
+
+function doneLoading() {
+  const elem = document.getElementById('loading-message');
+  elem.style.display = 'none';
 }

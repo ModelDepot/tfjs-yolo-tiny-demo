@@ -1,12 +1,36 @@
 <html>
 <head>
+  <meta name="viewport" content="width=600">
   <link rel="stylesheet" type="text/css" href="index.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/github-fork-ribbon-css/0.2.2/gh-fork-ribbon.min.css" />
 </head>
 <body>
-  <div id="webcam-wrapper">
-    <video autoplay playsinline muted
-      id="webcam" width="416" height="416">
-    </video>
+  <a
+    class="github-fork-ribbon"
+    href="https://github.com/ModelDepot/tfjs-yolo-tiny-demo"
+    data-ribbon="Fork me on GitHub"
+    title="Fork me on GitHub">
+    Fork me on GitHub
+  </a>
+  <div class="wrapper">
+    <div class="logo-wrapper">
+      <a href="https://modeldepot.io/?ref=tfjs-yolo-tiny-demo" target="_blank" rel="noopener noreferrer">
+        <img class="logo" src="assets/ModelDepot-logo.png">
+      </a>
+    </div>
+    <div id="loading-message">
+      Loading Skynet (This may take a minute)...
+      <div>
+        <img class="spin" src="assets/logo.png">
+      </div>
+    </div>
+    <div class="webcam-ui-container">
+      <div id="webcam-wrapper">
+        <video autoplay playsinline muted
+          id="webcam" width="416" height="416">
+        </video>
+      </div>
+    </div>
   </div>
   <script src="index.js"></script>
 </body>
