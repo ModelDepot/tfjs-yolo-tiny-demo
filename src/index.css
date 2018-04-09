@@ -34,6 +34,7 @@ html, body {
 .rect .label {
   background: white;
   color: black;
+  display: inline;
 }
 
 .intro {
@@ -51,7 +52,9 @@ html, body {
   line-height: 1.4;
 }
 
-
+#error-message {
+  text-align: center;
+}
 #loading-message {
   text-align: center;
 }

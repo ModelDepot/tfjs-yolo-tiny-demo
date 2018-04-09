@@ -7,11 +7,16 @@ let model;
 const webcam = new Webcam(document.getElementById('webcam'));
 
 (async function main() {
-  await webcam.setup();
-  model = await downloadModel();
+  try {
+    await webcam.setup();
+    model = await downloadModel();
 
-  doneLoading();
-  run();
+    doneLoading();
+    run();
+  } catch(e) {
+    console.error(e);
+    showError();
+  }
 })();
 
 async function run() {
@@ -31,7 +36,8 @@ async function run() {
       top, left, bottom, right, classProb, className,
     } = box;
 
-    drawRect(left, top, right-left, bottom-top, `${className} ${classProb}`)
+    drawRect(left, top, right-left, bottom-top,
+      `${className} Confidence: ${Math.round(classProb * 100)}%`)
   });
 
   await tf.nextFrame();
@@ -64,4 +70,10 @@ export function clearRects() {
 function doneLoading() {
   const elem = document.getElementById('loading-message');
   elem.style.display = 'none';
+}
+
+function showError() {
+  const elem = document.getElementById('error-message');
+  elem.style.display = 'block';
+  doneLoading();
 }
