@@ -31,6 +31,38 @@
         </video>
       </div>
     </div>
+    <div class="intro">
+      <h1>What's going on?</h1>
+      <p>
+        Using
+        <a href="https://js.tensorflow.org" target="_blank" rel="noopener noreferrer">
+        Tensorflow.js</a>, we're able to use deep learning to detect
+        objects from your webcam! Your webcam feed never leaves your
+        computer and all the processing is being done locally!
+        (Trust me, we can't afford the servers to store/process your data)
+      </p>
+      <h1>How can I use something like this in my project?</h1>
+      <p>
+        Yes! Check out it out on ModelDepot!
+      </p>
+      <h1>Why is it so slow?</h1>
+      <p>
+        Real-time object detection is a challenging task, and most models
+        are optimized to run fast on powerful GPU-powered computers
+        with optimized code.
+        Most of us don't have super fast GPUs
+        (especially if you're browsing on mobile)
+        and Tensorflow.js can't take
+        full advantage of our computer's GPUs.
+      </p>
+      <h1>How does this work?</h1>
+      <p>
+        We're using
+        <a href="https://pjreddie.com/darknet/yolo/" target="_blank" rel="noopener noreferrer">
+        Tiny YOLO</a>, a ML model that's been converted to work
+        in Tensorflow.js.
+      </p>
+    </div>
   </div>
   <script src="index.js"></script>
 </body>

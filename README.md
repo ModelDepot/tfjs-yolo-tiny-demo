@@ -1,3 +1,5 @@
+<a href='https://modeldepot.io/mikeshi/tiny-yolo-in-javascript'> <img src='https://img.shields.io/badge/ModelDepot-Pre--trained_Model-3d9aff.svg'/> </a>
+
 # In-Browser ML-Powered Object Detection Demo
 
 Use YOLO deep learning model to detect objects locally in your browser
@@ -7,11 +9,11 @@ Want to use object detection in your project? Check out [the NPM package here](h
 
 ## Demo
 
+[Check out the Live Demo](https://modeldepot.github.io/tfjs-yolo-tiny-demo/)
+
 (You can only get so far with 1 FPS)
 
 ![yolo person detection](https://github.com/ModelDepot/tfjs-yolo-tiny/raw/master/assets/demo.gif)
-
-LIVE DEMO WILL BE OUT SOON!
 
 # Get Started
 

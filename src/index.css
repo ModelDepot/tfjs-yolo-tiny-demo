@@ -2,6 +2,7 @@ html, body {
   width: 100%;
   height: 100%;
   margin: 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 .wrapper {
   width: 100%;
@@ -35,9 +36,23 @@ html, body {
   color: black;
 }
 
+.intro {
+  max-width: 908px;
+  margin: 0 auto;
+  padding: 15px;
+}
+.intro h1 {
+  font-weight: 300;
+  font-weight: 2rem;
+}
+.intro p {
+  font-weight: 300;
+  font-size: 20px;
+  line-height: 1.4;
+}
+
 
 #loading-message {
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   text-align: center;
 }
 .spin {
