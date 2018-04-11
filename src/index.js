@@ -8,6 +8,7 @@ const webcam = new Webcam(document.getElementById('webcam'));
 
 (async function main() {
   try {
+    ga();
     await webcam.setup();
     model = await downloadModel();
 
@@ -76,4 +77,13 @@ function showError() {
   const elem = document.getElementById('error-message');
   elem.style.display = 'block';
   doneLoading();
+}
+
+function ga() {
+  if (process.env.UA) {
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', process.env.UA);
+  }
 }
