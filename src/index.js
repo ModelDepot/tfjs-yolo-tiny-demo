@@ -48,7 +48,7 @@ async function run() {
 
 const webcamElem = document.getElementById('webcam-wrapper');
 
-export function drawRect(x, y, w, h, text = '', color = 'red') {
+function drawRect(x, y, w, h, text = '', color = 'red') {
   const rect = document.createElement('div');
   rect.classList.add('rect');
   rect.style.cssText = `top: ${y}; left: ${x}; width: ${w}; height: ${h}; border-color: ${color}`;
@@ -61,7 +61,7 @@ export function drawRect(x, y, w, h, text = '', color = 'red') {
   webcamElem.appendChild(rect);
 }
 
-export function clearRects() {
+function clearRects() {
   const rects = document.getElementsByClassName('rect');
   while(rects[0]) {
     rects[0].parentNode.removeChild(rects[0]);
