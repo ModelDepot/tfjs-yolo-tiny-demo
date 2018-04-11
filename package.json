@@ -4,8 +4,8 @@
   "main": "src/index.js",
   "license": "MIT",
   "dependencies": {
-    "@tensorflow/tfjs": "^0.7.x",
-    "tfjs-yolo-tiny": "^0.0.2"
+    "@tensorflow/tfjs": "0.x",
+    "tfjs-yolo-tiny": "^0.0.4"
   },
   "devDependencies": {
     "babel-core": "^6.26.0",
