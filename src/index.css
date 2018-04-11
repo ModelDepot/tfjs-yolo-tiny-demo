@@ -54,6 +54,14 @@ html, body {
 
 #error-message {
   text-align: center;
+  margin: 25px 0;
+}
+#success-message {
+  text-align: center;
+  max-width: 450px;
+  margin: 25px auto;
+  color: #00c13f;
+  line-height: 1.5;
 }
 #loading-message {
   text-align: center;

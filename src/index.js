@@ -9,8 +9,14 @@ const webcam = new Webcam(document.getElementById('webcam'));
 (async function main() {
   try {
     ga();
-    await webcam.setup();
     model = await downloadModel();
+
+    alert("Just a heads up! We'll ask to access your webcam so that we can " +
+      "detect objects in semi-real-time. \n\nDon't worry, we aren't sending " +
+      "any of your images to a remote server, all the ML is being done " +
+      "locally on device, and you can check out our source code on Github.");
+
+    await webcam.setup();
 
     doneLoading();
     run();
@@ -21,29 +27,29 @@ const webcam = new Webcam(document.getElementById('webcam'));
 })();
 
 async function run() {
-  clearRects();
+  while (true) {
+    clearRects();
 
-  const inputImage = webcam.capture();
+    const inputImage = webcam.capture();
 
-  const t0 = performance.now();
+    const t0 = performance.now();
 
-  const boxes = await yolo(inputImage, model);
+    const boxes = await yolo(inputImage, model);
 
-  const t1 = performance.now();
-  console.log("YOLO inference took " + (t1 - t0) + " milliseconds.");
+    const t1 = performance.now();
+    console.log("YOLO inference took " + (t1 - t0) + " milliseconds.");
 
-  boxes.forEach(box => {
-    const {
-      top, left, bottom, right, classProb, className,
-    } = box;
+    boxes.forEach(box => {
+      const {
+        top, left, bottom, right, classProb, className,
+      } = box;
 
-    drawRect(left, top, right-left, bottom-top,
-      `${className} Confidence: ${Math.round(classProb * 100)}%`)
-  });
+      drawRect(left, top, right-left, bottom-top,
+        `${className} Confidence: ${Math.round(classProb * 100)}%`)
+    });
 
-  await tf.nextFrame();
-
-  run();
+    await tf.nextFrame();
+  }
 }
 
 const webcamElem = document.getElementById('webcam-wrapper');
@@ -71,6 +77,12 @@ function clearRects() {
 function doneLoading() {
   const elem = document.getElementById('loading-message');
   elem.style.display = 'none';
+
+  const successElem = document.getElementById('success-message');
+  successElem.style.display = 'block';
+
+  const webcamElem = document.getElementById('webcam-wrapper');
+  webcamElem.style.display = 'block';
 }
 
 function showError() {

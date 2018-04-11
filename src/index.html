@@ -20,16 +20,22 @@
       </a>
     </div>
     <div id="loading-message">
-      Loading Skynet (This may take a minute)...
+      Loading Skynet (This may take a minute, 40mb)...
       <div>
         <img class="spin" src="assets/logo.png">
       </div>
     </div>
     <div id="error-message" style="display:none">
       Sorry! An error occured while loading the model 😢
+      <br>
+      If you're on an iPhone, please try using Safari.
+    </div>
+    <div id="success-message" style="display:none">
+      Point me at something, but please be a bit patient while I try to figure out what it is!
+      (Ex. person, keyboard, cell phone, car, pet, etc.)
     </div>
     <div class="webcam-ui-container">
-      <div id="webcam-wrapper">
+      <div id="webcam-wrapper" style="display: none">
         <video autoplay playsinline muted
           id="webcam" width="416" height="416">
         </video>
