@@ -35,6 +35,11 @@ html, body {
   background: white;
   color: black;
   display: inline;
+  opacity: 0.8;
+  font-size: 12px;
+  padding: 3px;
+  text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .intro {

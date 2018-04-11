@@ -5,7 +5,8 @@
 Use YOLO deep learning model to detect objects locally in your browser
 (no servers required).
 
-Want to use object detection in your project? Check out [the NPM package here](https://www.npmjs.com/package/tfjs-yolo-tiny).
+Want to use object detection in your project?
+Check out [the NPM package here](https://github.com/ModelDepot/tfjs-yolo-tiny).
 
 ## Demo
 
@@ -16,6 +17,9 @@ Want to use object detection in your project? Check out [the NPM package here](h
 ![yolo person detection](https://github.com/ModelDepot/tfjs-yolo-tiny/raw/master/assets/demo.gif)
 
 # Get Started
+
+Looking for the NPM package repo to use object detection in your own app?
+Find it [here](https://github.com/ModelDepot/tfjs-yolo-tiny).
 
 ## Install Dependencies
     yarn
