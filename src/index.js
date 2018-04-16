@@ -82,7 +82,7 @@ function doneLoading() {
   successElem.style.display = 'block';
 
   const webcamElem = document.getElementById('webcam-wrapper');
-  webcamElem.style.display = 'block';
+  webcamElem.style.display = 'flex';
 }
 
 function showError() {
