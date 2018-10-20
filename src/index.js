@@ -28,17 +28,20 @@ const webcam = new Webcam(document.getElementById('webcam'));
 
 async function run() {
   while (true) {
-    clearRects();
-
     const inputImage = webcam.capture();
 
     const t0 = performance.now();
 
     const boxes = await yolo(inputImage, model);
 
+    inputImage.dispose();
+
     const t1 = performance.now();
     console.log("YOLO inference took " + (t1 - t0) + " milliseconds.");
 
+    console.log('tf.memory(): ', tf.memory());
+
+    clearRects();
     boxes.forEach(box => {
       const {
         top, left, bottom, right, classProb, className,
