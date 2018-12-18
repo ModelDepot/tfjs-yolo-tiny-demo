@@ -23,6 +23,9 @@ Find it [here](https://github.com/ModelDepot/tfjs-yolo-tiny).
 
 ## Install Dependencies
     yarn
+    
+### node 10
+    yarn --ignore-engines 
 
 ## Serve Demo
     yarn serve
